@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for FILE in ipynb/*
+for FILE in $1
 do
 FNAME="${FILE##*/}"
 FROOT="${FNAME%.*}"
