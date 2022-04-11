@@ -14591,7 +14591,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span> <span class="k">as</span> <span class="nn">cv</span>
 </pre></div>
 
      </div>
@@ -14618,9 +14618,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
-<span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># 0=indefinitely, otherwise delay in ms</span>
-<span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
+<span class="n">cv</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># 0=indefinitely, otherwise delay in ms</span>
+<span class="n">cv</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14636,11 +14636,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv2</span><span class="o">.</span><span class="n">namedWindow</span><span class="p">(</span><span class="s1">&#39;window&#39;</span><span class="p">)</span>
-<span class="n">cv2</span><span class="o">.</span><span class="n">setMouseCallback</span><span class="p">(</span><span class="s1">&#39;Image mouse&#39;</span><span class="p">,</span> <span class="n">mouse_callback</span><span class="p">,</span> <span class="n">param</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv</span><span class="o">.</span><span class="n">namedWindow</span><span class="p">(</span><span class="s1">&#39;window&#39;</span><span class="p">)</span>
+<span class="n">cv</span><span class="o">.</span><span class="n">setMouseCallback</span><span class="p">(</span><span class="s1">&#39;Image mouse&#39;</span><span class="p">,</span> <span class="n">mouse_callback</span><span class="p">,</span> <span class="n">param</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">mouse_callback</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="n">cv2</span><span class="o">.</span><span class="n">EVENT_LBUTTONDOWN</span> <span class="o">|</span> <span class="n">cv2</span><span class="o">.</span><span class="n">EVENT_LBUTTONUP</span> <span class="o">|</span><span class="n">cv2</span><span class="o">.</span><span class="n">EVENT_LBUTTONDBLCLK</span> <span class="o">|</span>
-                <span class="n">cv2</span><span class="o">.</span><span class="n">EVENT_MOUSEMOVE</span> <span class="o">|</span> <span class="n">cv2</span><span class="o">.</span><span class="n">EVENT_MOUSEWHEEL</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="n">cv</span><span class="o">.</span><span class="n">EVENT_LBUTTONDOWN</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">EVENT_LBUTTONUP</span> <span class="o">|</span><span class="n">cv</span><span class="o">.</span><span class="n">EVENT_LBUTTONDBLCLK</span> <span class="o">|</span>
+                <span class="n">cv</span><span class="o">.</span><span class="n">EVENT_MOUSEMOVE</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">EVENT_MOUSEWHEEL</span><span class="p">:</span>
     <span class="k">pass</span>
 </pre></div>
 
@@ -14672,13 +14672,13 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="n">g</span> <span class="o">=</span> <span class="n">img_OpenCV</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">img_OpenCV</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="c1"># --- or ---</span>
-<span class="n">b</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">b</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 
-<span class="n">img</span> <span class="o">=</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">merge</span><span class="p">((</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">merge</span><span class="p">((</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
 
 <span class="n">img_rgb</span> <span class="o">=</span> <span class="n">img_bgr</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="c1"># --- or ---</span>
-<span class="n">img_rgb</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img_bgr</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+<span class="n">img_rgb</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img_bgr</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14694,8 +14694,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">img_gry</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img_bgr</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
-<span class="n">img_col</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">applyColorMap</span><span class="p">(</span><span class="n">img_gry</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLORMAP_JET</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">img_gry</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img_bgr</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+<span class="n">img_col</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">applyColorMap</span><span class="p">(</span><span class="n">img_gry</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">COLORMAP_JET</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14727,7 +14727,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="n">img_b</span> <span class="o">=</span> <span class="n">img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span>
 <span class="n">img_slice</span> <span class="o">=</span> <span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span>
 
-<span class="n">img</span><span class="p">[:]</span> <span class="o">=</span> <span class="mi">128</span>  <span class="c1"># img.fill(128)</span>
+<span class="n">img</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+<span class="n">img</span><span class="p">[:]</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="n">img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 
@@ -14772,8 +14773,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;img.png&#39;</span><span class="p">)</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;img.png&#39;</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;img.png&#39;</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;img.png&#39;</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14789,7 +14790,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s1">&#39;img.jpg&#39;</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s1">&#39;img.jpg&#39;</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14816,12 +14817,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">capture</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># 0=index_camera, also video filename</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">capture</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># 0=index_camera, also video filename</span>
 <span class="k">assert</span> <span class="n">capture</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span>
 
-<span class="n">width</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_WIDTH</span><span class="p">)</span>
-<span class="n">height</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_HEIGHT</span><span class="p">)</span>
-<span class="n">fps</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FPS</span><span class="p">)</span>
+<span class="n">width</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_WIDTH</span><span class="p">)</span>
+<span class="n">height</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_HEIGHT</span><span class="p">)</span>
+<span class="n">fps</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">CAP_PROP_FPS</span><span class="p">)</span>
 
 <span class="k">while</span> <span class="n">capture</span><span class="o">.</span><span class="n">isOpened</span><span class="p">():</span>
     <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
@@ -14842,9 +14843,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fourcc</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoWriter_fourcc</span><span class="p">(</span><span class="o">*</span><span class="s1">&#39;AVC1&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fourcc</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">VideoWriter_fourcc</span><span class="p">(</span><span class="o">*</span><span class="s1">&#39;AVC1&#39;</span><span class="p">)</span>
 <span class="c1"># https://gist.github.com/takuma7/44f9ecb028ff00e2132e</span>
-<span class="n">writer</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoWriter</span><span class="p">(</span><span class="n">video_path</span><span class="p">,</span> <span class="n">fourcc</span><span class="p">,</span> <span class="n">fps</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">is_color</span><span class="p">)</span>
+<span class="n">writer</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">VideoWriter</span><span class="p">(</span><span class="n">video_path</span><span class="p">,</span> <span class="n">fourcc</span><span class="p">,</span> <span class="n">fps</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">is_color</span><span class="p">)</span>
 <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
 <span class="n">writer</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
 </pre></div>
@@ -14863,8 +14864,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># navigating video files</span>
-<span class="n">num_frames</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_COUNT</span><span class="p">)</span>
-<span class="n">capture</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_POS_FRAMES</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">FRAME_INDEX</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">num_frames</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_COUNT</span><span class="p">)</span>
+<span class="n">capture</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">CAP_PROP_POS_FRAMES</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">FRAME_INDEX</span><span class="o">&gt;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14894,7 +14895,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pt1</span><span class="p">,</span> <span class="n">pt2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">pts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">250</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">220</span><span class="p">,</span> <span class="mi">80</span><span class="p">],</span> <span class="p">[</span><span class="mi">280</span><span class="p">,</span> <span class="mi">80</span><span class="p">]],</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
-<span class="n">lineType</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">LINE_4</span> <span class="o">|</span> <span class="n">cv2</span><span class="o">.</span><span class="n">LINE_8</span> <span class="o">|</span> <span class="n">cv2</span><span class="o">.</span><span class="n">LINE_AA</span>
+<span class="n">lineType</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">LINE_4</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">LINE_8</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">LINE_AA</span>
 <span class="n">thicknes</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>  <span class="c1"># fill shape </span>
 </pre></div>
 
@@ -14911,13 +14912,13 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv2</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">pt1</span><span class="p">,</span> <span class="n">pt2</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">cv</span><span class="o">.</span><span class="n">arrowedLine</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">pt1</span><span class="p">,</span> <span class="n">pt2</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tipLength</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1"># pt1=&gt;pt2</span>
-<span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">pt1</span><span class="p">,</span> <span class="n">pt2</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">cv2</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">cv2</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">axes</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">startAngle</span><span class="p">,</span> <span class="n">endAngle</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span>
-            <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">cv2</span><span class="o">.</span><span class="n">polylines</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">pts</span><span class="p">,</span> <span class="n">is_closed</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">pt1</span><span class="p">,</span> <span class="n">pt2</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cv</span><span class="o">.</span><span class="n">arrowedLine</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">pt1</span><span class="p">,</span> <span class="n">pt2</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tipLength</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1"># pt1==&gt;pt2</span>
+<span class="n">cv</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">pt1</span><span class="p">,</span> <span class="n">pt2</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cv</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cv</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">axes</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">startAngle</span><span class="p">,</span> <span class="n">endAngle</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span>
+           <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cv</span><span class="o">.</span><span class="n">polylines</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">pts</span><span class="p">,</span> <span class="n">is_closed</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14961,7 +14962,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">font_face</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">FONT_HERSHEY_SIMPLEX</span> <span class="ow">or</span> <span class="n">cv</span><span class="o">.</span><span class="n">FONT_HERSHEY_DUPLEX</span> <span class="ow">or</span> <span class="o">...</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">font_face</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">FONT_HERSHEY_SIMPLEX</span> <span class="ow">or</span> <span class="n">cv</span><span class="o">.</span><span class="n">FONT_HERSHEY_DUPLEX</span> <span class="ow">or</span> <span class="o">...</span>
 <span class="n">cv</span><span class="o">.</span><span class="n">putText</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">org</span><span class="p">,</span> <span class="n">fontFace</span><span class="p">,</span> <span class="n">fontScale</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span>
            <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">bottomLeftOrigin</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># !bottomLeftOrigin =&gt; upperLeftOrigin</span>
 </pre></div>
@@ -14979,8 +14980,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">font_scale</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getFontScaleFromHeight</span><span class="p">(</span><span class="n">fontFace</span><span class="p">,</span> <span class="n">pixelHeight</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">baseLine</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getTextSize</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">fontFace</span><span class="p">,</span> <span class="n">fontScale</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">font_scale</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">getFontScaleFromHeight</span><span class="p">(</span><span class="n">fontFace</span><span class="p">,</span> <span class="n">pixelHeight</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">baseLine</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">getTextSize</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">fontFace</span><span class="p">,</span> <span class="n">fontScale</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15007,10 +15008,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">interpolation</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_NEAREST</span> <span class="o">|</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_LINEAR</span> <span class="o">|</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_CUBIC</span> <span class="o">|</span>
-                <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_AREA</span> <span class="o">|</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_LANCZOS4</span>
-<span class="n">resized_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">interpolation</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">INTER_LINEAR</span><span class="p">)</span>
-<span class="n">resized_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">fx</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">fy</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Resizing</span>
+<span class="n">interpolation</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">INTER_NEAREST</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">INTER_LINEAR</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">INTER_CUBIC</span> <span class="o">|</span>
+                <span class="n">cv</span><span class="o">.</span><span class="n">INTER_AREA</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">INTER_LANCZOS4</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">interpolation</span><span class="o">=</span><span class="n">cv</span><span class="o">.</span><span class="n">INTER_LINEAR</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">fx</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">fy</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># dSize=None =&gt; auto-calc</span>
+<span class="c1"># ---</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">pyrDown</span><span class="p">(</span><span class="n">src</span><span class="p">[,</span> <span class="n">dst</span><span class="p">[,</span> <span class="n">dSize</span><span class="p">[,</span> <span class="n">borderType</span><span class="p">]]])</span>  <span class="c1"># Blur and downsample (2X)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">pyrUp</span><span class="p">(</span><span class="n">src</span><span class="p">[,</span> <span class="n">dst</span><span class="p">[,</span> <span class="n">dSize</span><span class="p">[,</span> <span class="n">borderType</span><span class="p">]]])</span>    <span class="c1"># Upsample (2X) and blur</span>
 </pre></div>
 
      </div>
@@ -15029,6 +15034,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Translation</span>
 <span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">translate_x</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">translate_y</span><span class="p">]])</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">warpAffine</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="p">(</span><span class="n">outputWidth</span><span class="p">,</span> <span class="n">outputHeight</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15045,25 +15051,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Rotation</span>
-<span class="n">M</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getRotationMatrix2D</span><span class="p">(</span><span class="n">center_height</span><span class="p">,</span> <span class="n">center_width</span><span class="p">),</span> <span class="n">angleDeg</span><span class="p">,</span> <span class="n">scaleFactor</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pts_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
-<span class="n">pts_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">M</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getAffineTransform</span><span class="p">(</span><span class="n">pts_1</span><span class="p">,</span> <span class="n">pts_2</span><span class="p">)</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">getRotationMatrix2D</span><span class="p">((</span><span class="n">centerX</span><span class="p">,</span> <span class="n">centerY</span><span class="p">),</span> <span class="n">angleDeg</span><span class="p">,</span> <span class="n">scaleFactor</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">warpAffine</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="p">(</span><span class="n">outputWidth</span><span class="p">,</span> <span class="n">outputHeight</span><span class="p">))</span>
+<span class="c1"># ---</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>  <span class="c1">## Rotate 90-deg CCW</span>
 </pre></div>
 
      </div>
@@ -15080,7 +15071,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Affine Transformation</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">warpAffine</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="p">(</span><span class="n">output_height</span><span class="p">,</span> <span class="n">output_width</span><span class="p">))</span>
+<span class="n">pts_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">pts_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">getAffineTransform</span><span class="p">(</span><span class="n">pts_1</span><span class="p">,</span> <span class="n">pts_2</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">warpAffine</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="p">(</span><span class="n">outputWidth</span><span class="p">,</span> <span class="n">outputHeight</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15096,11 +15090,29 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Perspective Transformaion</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Perspective Transformation</span>
 <span class="n">pts_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
 <span class="n">pts_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]])</span>
-<span class="n">M</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getPerspectiveTransform</span><span class="p">(</span><span class="n">pts_1</span><span class="p">,</span> <span class="n">pts_2</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">warpPerspective</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">))</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">getPerspectiveTransform</span><span class="p">(</span><span class="n">pts_1</span><span class="p">,</span> <span class="n">pts_2</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">warpPerspective</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Horz/Vert Flipping</span>
+<span class="c1"># flipCode: 0 =&gt; Horz, 1 =&gt; Vert, -1 =&gt; Both</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">flipCode</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15129,7 +15141,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kernel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">/</span> <span class="mi">25</span>
 <span class="c1"># ddepth=-1 =&gt; output will have same depth as source</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">filter2D</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">ddepth</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">filter2D</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">ddepth</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15239,11 +15251,14 @@ __Laplacian Kernels__
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Unsharp Mask</span>
-<span class="n">smoothed</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">ksize</span><span class="p">,</span> <span class="n">sigmaX</span><span class="p">)</span>
-<span class="c1"># cv2.addWeighted(src1, alpha, src2, beta, gamma)</span>
-<span class="c1"># dst = 𝚜𝚛𝚌𝟷∗𝚊𝚕𝚙𝚑𝚊 + 𝚜𝚛𝚌𝟸∗𝚋𝚎𝚝𝚊 + 𝚐𝚊𝚖𝚖𝚊</span>
-<span class="n">unsharped</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">addWeighted</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">smoothed</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Sobel</span>
+<span class="c1"># dx, dy: order of derivative</span>
+<span class="c1"># cv.Sobel(src, ddepth, dx, dy[, dst[, ksize=3[, ...]]])</span>
+<span class="n">image_x</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">Sobel</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">CV_32F</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ksize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">image_y</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">Sobel</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">CV_32F</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ksize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="c1"># Laplacian</span>
+<span class="c1"># cv.Laplacian(src, ddepth[, dst[, ksize[, ...]]])</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">Laplacian</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">CV_32F</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15259,10 +15274,32 @@ __Laplacian Kernels__
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gausssian Blur</span>
-<span class="n">ksize</span> <span class="o">=</span> <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Unsharp Mask</span>
+<span class="n">smoothed</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">ksize</span><span class="p">,</span> <span class="n">sigmaX</span><span class="p">)</span>
+<span class="c1"># cv.addWeighted(src1, alpha, src2, beta, gamma)</span>
+<span class="c1"># dst = 𝚜𝚛𝚌𝟷∗𝚊𝚕𝚙𝚑𝚊 + 𝚜𝚛𝚌𝟸∗𝚋𝚎𝚝𝚊 + 𝚐𝚊𝚖𝚖𝚊</span>
+<span class="n">unsharped</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">addWeighted</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">smoothed</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ksize</span> <span class="o">=</span> <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<span class="c1"># Box Blur</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">blur</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">ksize</span><span class="p">)</span>
+<span class="c1"># Gausssian Blur</span>
 <span class="c1"># sigmaX=0 =&gt; computed from ksize.width and ksize.height</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">ksize</span><span class="p">,</span> <span class="n">sigmaX</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">ksize</span><span class="p">,</span> <span class="n">sigmaX</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15280,7 +15317,7 @@ __Laplacian Kernels__
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Median Blur</span>
 <span class="n">ksize1</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># width == height</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">medianBlur</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">ksize1</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">medianBlur</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">ksize1</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15298,7 +15335,7 @@ __Laplacian Kernels__
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Bilateral Blur</span>
 <span class="c1"># dia&lt;0 =&gt; computed from sigmaSpatial</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">bilateralFilter</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">dia</span><span class="p">,</span> <span class="n">sigmaColor</span><span class="p">,</span> <span class="n">SigmaSpatial</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">bilateralFilter</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">dia</span><span class="p">,</span> <span class="n">sigmaColor</span><span class="p">,</span> <span class="n">SigmaSpatial</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15330,6 +15367,50 @@ __Laplacian Kernels__
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="NLM-Denoising">NLM Denoising<a class="anchor-link" href="#NLM-Denoising">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>cv.fastNlMeansDenoising() - single grayscale image</li>
+<li>cv.fastNlMeansDenoisingColored() - color image</li>
+<li>cv.fastNlMeansDenoisingMulti() - sequence of grayscale images</li>
+<li>cv.fastNlMeansDenoisingColoredMulti() - sequence of color images</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fastNlMeansDenoising</span><span class="p">(</span><span class="n">img</span><span class="p">[,</span> <span class="n">dst</span><span class="p">[,</span> <span class="n">h</span><span class="o">=</span><span class="mf">3.0</span><span class="p">[,</span> <span class="n">hColor</span><span class="o">=</span><span class="mf">3.0</span><span class="p">[,</span> <span class="n">templateWindowSize</span><span class="o">=</span><span class="mi">7</span><span class="p">[,</span> <span class="n">searchWindowSize</span><span class="o">=</span><span class="mi">21</span><span class="p">]]]]])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Arithmetic-Ops">Arithmetic Ops<a class="anchor-link" href="#Arithmetic-Ops">&#182;</a></h3>
 </div>
 </div>
@@ -15344,8 +15425,8 @@ __Laplacian Kernels__
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Saturation Arithmetic</span>
 <span class="c1"># src1, src2: array or scalar</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">src1</span><span class="p">,</span> <span class="n">src2</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">src1</span><span class="p">,</span> <span class="n">src2</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">src1</span><span class="p">,</span> <span class="n">src2</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">src1</span><span class="p">,</span> <span class="n">src2</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15362,7 +15443,7 @@ __Laplacian Kernels__
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Blending</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">addWeighted</span><span class="p">(</span><span class="n">src1</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">src2</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">addWeighted</span><span class="p">(</span><span class="n">src1</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">src2</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15379,10 +15460,10 @@ __Laplacian Kernels__
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Bitwise</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">bitwise_not</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">bitwise_and</span><span class="p">(</span><span class="n">src1</span><span class="p">,</span> <span class="n">src2</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">bitwise_or</span><span class="p">(</span><span class="n">src1</span><span class="p">,</span> <span class="n">src2</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">bitwise_xor</span><span class="p">(</span><span class="n">src1</span><span class="p">,</span> <span class="n">src2</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">bitwise_not</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">bitwise_and</span><span class="p">(</span><span class="n">src1</span><span class="p">,</span> <span class="n">src2</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">bitwise_or</span><span class="p">(</span><span class="n">src1</span><span class="p">,</span> <span class="n">src2</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">bitwise_xor</span><span class="p">(</span><span class="n">src1</span><span class="p">,</span> <span class="n">src2</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15400,7 +15481,7 @@ __Laplacian Kernels__
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># lowerb: inclusive lower-bound array/scalar</span>
 <span class="c1"># upperb: inclusive upper-bound array/scalar</span>
-<span class="n">mask</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">inRange</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">lowerb</span><span class="p">,</span> <span class="n">upperb</span><span class="p">)</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">inRange</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">lowerb</span><span class="p">,</span> <span class="n">upperb</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15428,7 +15509,7 @@ __Laplacian Kernels__
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shape</span> <span class="o">=</span>  <span class="n">cv</span><span class="o">.</span><span class="n">MORPH_RECT</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">MORPH_ELLIPSE</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">MORPH_CROSS</span>
-<span class="n">cv2</span><span class="o">.</span><span class="n">getStructuringElement</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">ksize</span><span class="p">)</span>
+<span class="n">cv</span><span class="o">.</span><span class="n">getStructuringElement</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">ksize</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15444,8 +15525,8 @@ __Laplacian Kernels__
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">dilate</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">erode</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">dilate</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">erode</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15461,11 +15542,11 @@ __Laplacian Kernels__
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">MORPH_OPEN</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>      <span class="c1"># erosion → dilation</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">MORPH_CLOSE</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>     <span class="c1"># dilation → erosion</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">MORPH_GRADIENT</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>  <span class="c1"># dilation - erosion</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">MORPH_TOPHAT</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>    <span class="c1"># original - opening</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">MORPH_BLACKHAT</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>  <span class="c1"># closing - original</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">MORPH_OPEN</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>      <span class="c1"># erosion → dilation</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">MORPH_CLOSE</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>     <span class="c1"># dilation → erosion</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">MORPH_GRADIENT</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>  <span class="c1"># dilation - erosion</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">MORPH_TOPHAT</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>    <span class="c1"># original - opening</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">MORPH_BLACKHAT</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>  <span class="c1"># closing - original</span>
 </pre></div>
 
      </div>
@@ -15491,7 +15572,7 @@ __Laplacian Kernels__
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>NOTE: cv2.calcHist() is much faster than np.histogram() and plt.hist()</p>
+<p>NOTE: cv.calcHist() is much faster than np.histogram() and plt.hist()</p>
 
 </div>
 </div>
@@ -15507,11 +15588,9 @@ __Laplacian Kernels__
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># images: list of images</span>
 <span class="c1"># channels: list of channel idxs, e.g. grayscale: [0], color: [0, 1, 2]</span>
 <span class="c1"># mask : None =&gt; no mask</span>
-<span class="c1"># histSize: list of # bins</span>
-<span class="c1"># ranges: range of intensity to measure, e.g. [0, 256]</span>
-
-<span class="c1"># cv2.calcHist([image], [channel], mask, [histSize], [range])</span>
-<span class="n">hist</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">calcHist</span><span class="p">([</span><span class="n">img_bgr</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="kc">None</span><span class="p">,</span> <span class="p">[</span><span class="mi">256</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">])</span>
+<span class="c1"># histSize: list of # hist bins</span>
+<span class="c1"># ranges: range of intensity to measure (upper non-inclusive), e.g. [0, 256]</span>
+<span class="n">hist</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">calcHist</span><span class="p">([</span><span class="n">image</span><span class="p">],</span> <span class="p">[</span><span class="n">channels</span><span class="p">],</span> <span class="n">mask</span><span class="p">,</span> <span class="p">[</span><span class="n">histSize</span><span class="p">],</span> <span class="p">[</span><span class="n">ranges</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -15557,12 +15636,12 @@ __Laplacian Kernels__
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grayscale</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">equalizeHist</span><span class="p">(</span><span class="n">img_gry</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">equalizeHist</span><span class="p">(</span><span class="n">img_gry</span><span class="p">)</span>
 
 <span class="c1"># Color</span>
-<span class="n">H</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2HSV</span><span class="p">))</span>
-<span class="n">V_eq</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">equalizeHist</span><span class="p">(</span><span class="n">V</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">merge</span><span class="p">([</span><span class="n">H</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">eq_V</span><span class="p">]),</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_HSV2BGR</span><span class="p">)</span>
+<span class="n">H</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv</span><span class="o">.</span><span class="n">COLOR_BGR2HSV</span><span class="p">))</span>
+<span class="n">V_eq</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">equalizeHist</span><span class="p">(</span><span class="n">V</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">merge</span><span class="p">([</span><span class="n">H</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">eq_V</span><span class="p">]),</span> <span class="n">cv</span><span class="o">.</span><span class="n">COLOR_HSV2BGR</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15579,8 +15658,8 @@ __Laplacian Kernels__
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># CLAHE</span>
-<span class="c1"># cv2.createCLAHE(clipLimit, tileGridSize=(8,8))</span>
-<span class="n">clahe</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">createCLAHE</span><span class="p">(</span><span class="n">clipLimit</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="c1"># cv.createCLAHE(clipLimit, tileGridSize=(8,8))</span>
+<span class="n">clahe</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">createCLAHE</span><span class="p">(</span><span class="n">clipLimit</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">clahe</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">img_gry</span><span class="p">)</span>
 </pre></div>
 
@@ -15608,8 +15687,8 @@ __Laplacian Kernels__
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">threshType</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">THRESH_BINARY</span> <span class="o">|</span> <span class="n">cv2</span><span class="o">.</span><span class="n">THRESH_BINARY_INV</span> <span class="o">|</span> <span class="n">cv2</span><span class="o">.</span><span class="n">THRESH_TRUNC</span> <span class="o">|</span> <span class="n">cv2</span><span class="o">.</span><span class="n">THRESH_OTSU</span>
-<span class="n">retval</span><span class="p">,</span> <span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">thresh</span><span class="p">,</span> <span class="n">maxval</span><span class="p">,</span> <span class="n">threshType</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">threshType</span> <span class="o">=</span> <span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">THRESH_BINARY</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">THRESH_BINARY_INV</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">THRESH_TRUNC</span><span class="p">)</span> <span class="o">+</span> <span class="n">cv</span><span class="o">.</span><span class="n">THRESH_OTSU</span>
+<span class="n">retval</span><span class="p">,</span> <span class="n">image</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">thresh</span><span class="p">,</span> <span class="n">maxval</span><span class="p">,</span> <span class="n">threshType</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15625,11 +15704,146 @@ __Laplacian Kernels__
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">adaptMethod</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">ADAPTIVE_THRESH_MEAN_C</span> <span class="o">|</span> <span class="n">cv2</span><span class="o">.</span><span class="n">ADAPTIVE_THRESH_GAUSSIAN_C</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">adaptMethod</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">ADAPTIVE_THRESH_MEAN_C</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">ADAPTIVE_THRESH_GAUSSIAN_C</span>
 <span class="c1"># ADAPTIVE_THRESH_GAUSSIAN_C =&gt; cross-correlation with Gaussian window (sigma depends on blockSize)</span>
 <span class="c1"># blocksize: int</span>
 <span class="c1"># threshOffs: constant subtracted from the (weighted) mean</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">adaptiveThreshold</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">maxValue</span><span class="p">,</span> <span class="n">adaptMethod</span><span class="p">,</span> <span class="n">threshType</span><span class="p">,</span> <span class="n">blockSize</span><span class="p">,</span> <span class="n">threshOffs</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Contours">Contours<a class="anchor-link" href="#Contours">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">img_edge</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">Canny</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="c1"># mode: cv.RETR_EXTERNAL =&gt; Outer only, cv.RETR_LIST =&gt; All, cv.RETR_TREE =&gt; All /w Hierarchy</span>
+<span class="n">method</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">CHAIN_APPROX_NONE</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">CHAIN_APPROX_SIMPLE</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">CHAIN_APPROX_TC89_L1</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">CHAIN_APPROX_TC89_KCOS</span>
+<span class="n">contours</span><span class="p">,</span> <span class="n">hierarchy</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">findContours</span><span class="p">(</span><span class="n">img_edge</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
+<span class="c1"># contourIdx: -1 =&gt; all </span>
+<span class="n">cv</span><span class="o">.</span><span class="n">drawContours</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">contours</span><span class="p">,</span> <span class="n">contourIdx</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">lineType</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Contour Length</span>
+<span class="n">closed</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># whether contour is closed</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.03</span> <span class="o">*</span> <span class="n">cv</span><span class="o">.</span><span class="n">arcLength</span><span class="p">(</span><span class="n">contour</span><span class="p">,</span> <span class="n">closed</span><span class="p">)</span>
+
+<span class="c1"># Vertices Reduction (Polygon Approximation)</span>
+<span class="c1"># epsilon: max dist between original contour and its approximation</span>
+<span class="n">approx</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">approxPolyDP</span><span class="p">(</span><span class="n">contour</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">,</span> <span class="n">closed</span><span class="p">)</span>
+
+<span class="c1"># Convex Hull</span>
+<span class="n">hull</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">convexHull</span><span class="p">(</span><span class="n">contour</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Contour Area</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">contourArea</span><span class="p">(</span><span class="n">contour</span><span class="p">)</span>
+
+<span class="c1"># Contour Moments</span>
+<span class="n">mo</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">moments</span><span class="p">(</span><span class="n">contours</span><span class="p">)</span>
+<span class="n">cx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">mo</span><span class="p">[</span><span class="s1">&#39;m10&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">mo</span><span class="p">[</span><span class="s1">&#39;m00&#39;</span><span class="p">])</span>
+<span class="n">cy</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">mo</span><span class="p">[</span><span class="s1">&#39;m01&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">mo</span><span class="p">[</span><span class="s1">&#39;m00&#39;</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Line-/-Circle-Detection">Line / Circle Detection<a class="anchor-link" href="#Line-/-Circle-Detection">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># rho: Dist resolution of accumulator (px)</span>
+<span class="c1"># theta: Angle resolution of accumulator (rads)</span>
+<span class="c1"># threshold: Accummmulator (votes) threshold</span>
+<span class="c1"># [min_theta], [max_theta]: min/max angle to check for lines</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">HoughLines</span><span class="p">(</span><span class="n">img_edge</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">threshold</span><span class="p">)</span>
+
+<span class="c1"># minLineLength: shorter line segments will be rejected</span>
+<span class="c1"># maxLineGap: max allowed gap between points to be on the same line </span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">HoughLinesP</span><span class="p">(</span><span class="n">img_edge</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">threshold</span><span class="p">[,</span> <span class="n">lines</span><span class="p">[,</span> <span class="n">minLineLength</span><span class="p">[,</span> <span class="n">maxLineGap</span><span class="p">]]])</span>
+
+<span class="c1"># dp: image_resolution / accum_resolution</span>
+<span class="c1"># minDist: min dist between circle centers</span>
+<span class="n">method</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">HOUGH_GRADIENT</span> <span class="o">|</span> <span class="n">cv</span><span class="o">.</span><span class="n">HOUGH_GRADIENT_ALT</span>
+<span class="n">circles</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">HoughCircles</span><span class="p">(</span><span class="n">img_gry</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">dp</span><span class="p">,</span> <span class="n">minDist</span><span class="p">[,</span> <span class="n">circles</span><span class="p">[,</span> <span class="n">param1</span><span class="p">[,</span> <span class="n">param2</span><span class="p">[,</span> <span class="n">minRadius</span><span class="p">[,</span> <span class="n">maxRadius</span><span class="p">]]]]])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>
